@@ -73,6 +73,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
 }
 ul {
   display: flex;
@@ -141,6 +142,9 @@ ul {
   display: flex;
   align-self: start;
   justify-content: space-between;
+}
+.product img {
+  border-radius: 8px;
 }
 .product-info {
   display: flex;
