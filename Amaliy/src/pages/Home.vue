@@ -1,27 +1,27 @@
 <template>
-  <nav class="bg-white border-b shadow-sm">
-    <div class="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
-      <!-- Logo -->
-      <router-link to="/" class="text-lg font-bold text-blue-600">
-        MyShop
-      </router-link>
+  <nav>
+    <!-- Logo -->
+    <router-link to="/" class="text-lg font-bold text-blue-600">
+      MyShop
+    </router-link>
 
-      <!-- Menu -->
-      <ul class="flex items-center gap-6">
-        <li>
-          <router-link to="/" class="hover:text-blue-600">Home</router-link>
-        </li>
-        <li>
-          <router-link to="/abut" class="hover:text-blue-600"
-            >About</router-link
-          >
-        </li>
-        <li>
-          <router-link to="/contact" class="hover:text-blue-600"
-            >Contact</router-link
-          >
-        </li>
-      </ul>
+    <!-- Menu -->
+    <ul class="nav-ul">
+      <li>
+        <router-link to="/">Home</router-link>
+      </li>
+      <li>
+        <router-link to="/abut">About</router-link>
+      </li>
+      <li>
+        <router-link to="/contact">Contact</router-link>
+      </li>
+    </ul>
+    <div class="nav-right">
+      <i
+        class="fa-solid fa-user"
+        style="width: 20px; color: black; height: 20px; font-size: 20px"
+      ></i>
     </div>
   </nav>
 </template>
@@ -32,4 +32,23 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 2px solid;
+}
+.nav-ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+</style>
