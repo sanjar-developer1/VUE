@@ -1,54 +1,94 @@
 <template>
-  <nav>
-    <!-- Logo -->
-    <router-link to="/" class="text-lg font-bold text-blue-600">
-      MyShop
-    </router-link>
+  <div class="home">
+    <section class="banner">
+      <Swiper />
+    </section>
 
-    <!-- Menu -->
-    <ul class="nav-ul">
-      <li>
-        <router-link to="/">Home</router-link>
-      </li>
-      <li>
-        <router-link to="/abut">About</router-link>
-      </li>
-      <li>
-        <router-link to="/contact">Contact</router-link>
-      </li>
-    </ul>
-    <div class="nav-right">
-      <i
-        class="fa-solid fa-user"
-        style="width: 20px; color: black; height: 20px; font-size: 20px"
-      ></i>
-    </div>
-  </nav>
+    <section class="categories">
+      <div class="category-card">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <p>Elektronika</p>
+      </div>
+      <div class="category-card">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <p>Kiyim-kechak</p>
+      </div>
+      <div class="category-card">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <p>Sport</p>
+      </div>
+      <div class="category-card">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <p>Maishiy texnika</p>
+      </div>
+      <div class="category-card">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <p>Maishiy texnika</p>
+      </div>
+    </section>
+  </div>
+  <Products />
 </template>
 
 <script>
+import Swiper from "../components/Swiper.vue";
+import Products from "./Products.vue";
 export default {
-  name: "Navbar",
+  name: "HomePage",
+  components: { Swiper, Products },
 };
 </script>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
+.home {
+  font-family: Arial, sans-serif;
+  padding: 20px;
 }
-nav {
+.cta-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #6a1b9a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.categories {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px 0;
+}
+.category-card {
+  text-align: center;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  border: 2px solid;
+  justify-content: center;
+  gap: 5px;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 12px;
 }
-.nav-ul {
+.category-card img {
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+.popular {
+  margin-top: 40px;
+}
+.advantages {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  margin-top: 50px;
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+}
+.advantage {
+  font-size: 16px;
+  font-weight: bold;
 }
 </style>
